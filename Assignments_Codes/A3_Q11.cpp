@@ -38,6 +38,7 @@ Node* pop( Stack* stack ) {
 	return stack->array[ stack->top-- ]; 
 } 
 Node* peek( Stack* stack )  {  return stack->array[ stack->top ];  } 
+
 Node* constructTree ( int pre[], int size ) 
 { Stack* stack = createStack( size ); 
     Node* root = newNode( pre[0] ); 
