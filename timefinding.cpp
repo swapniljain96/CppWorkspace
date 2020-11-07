@@ -34,3 +34,13 @@ int main()
    Function();
   cin.get();
 }
+
+/*
+void fastio(){
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+}
+int main(){
+	fastio();
+}
+*/
