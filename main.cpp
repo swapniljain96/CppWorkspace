@@ -1,13 +1,10 @@
-#include <bits/stdc++.h>
-#include <sstream>
-#include <vector>
-#include <string>
+#include<iostream>
 
 using namespace std;
 
 int main() 
 { 
-    cout<<"\n";
-    systyem("pause");
+    cout<<"This is DELL G3 \n";
+    system("pause");
     return 0;
 } 
