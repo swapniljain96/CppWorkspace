@@ -15,7 +15,6 @@ int main() {
 	{
 	string s;
 	cin >> s;
-	cout<<"\n\nZBBJQRRDQOKXSPFIXZRMGFPA\n";
 	cout << reverseWord(s) << endl;
 	}
     cout<<"\n";
