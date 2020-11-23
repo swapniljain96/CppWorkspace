@@ -5,6 +5,9 @@ void sort012(int[],int);
 
 int main() {
 
+
+    
+
     int t;
     cin >> t;
 
