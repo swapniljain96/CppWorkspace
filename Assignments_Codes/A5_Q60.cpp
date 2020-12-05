@@ -1,30 +1,30 @@
 class Solution {
 public:
-    string longestDiverseString(int a, int b, int c) {
-        int total=a+b+c;
+    string longestDiverseString(int A, int B, int C) {
+        int length=A+B+C;
         int currA=0, currB=0, currC=0;
-        string res = "";
-        while(total--){
+        string output = "";
+        while(length--){
             
-            if((a>=b && a>=c && currA!=2) || (a>0 && (currB==2|| currC==2))){
-                res+='a'; 
-                a--;
+            if((A>=B && A>=C && currA!=2) || (A>0 && (currB==2|| currC==2))){
+                output+='A'; 
+                A--;
                 currA++;
                 currB=currC=0;
             }
-            else if((b>=a && b>=c && currB!=2) || (b>0 && (currA==2|| currC==2))){
-                res+='b';
-                b--;
+            else if((B>=A && B>=C && currB!=2) || (B>0 && (currA==2|| currC==2))){
+                output+='B';
+                B--;
                 currB++;
                 currA=currC=0;
             }
-            else if((c>=a && c>=b && currC!=2) || (c>0 && (currA==2|| currB==2))){
-                res+='c';
-                c--;
+            else if((C>=A && C>=B && currC!=2) || (C>0 && (currA==2|| currB==2))){
+                output+='C';
+                C--;
                 currC++;
                 currA=currB=0;
             }
         }
-        return res;
+        return output;
     }
 };
