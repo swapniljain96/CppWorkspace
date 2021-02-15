@@ -1,3 +1,5 @@
+// https://www.hackerrank.com/challenges/lonely-integer/editorial
+
 #include <bits/stdc++.h>
 
 using namespace std;
