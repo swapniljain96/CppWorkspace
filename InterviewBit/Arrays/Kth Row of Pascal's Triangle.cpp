@@ -45,7 +45,7 @@ vector<int> Solution::getRow(int A)
     res.push_back(num);
     for (int i = 1; i <= A; i++)
     {
-        num *= (A - i + 1);
+        num *= (A - i + 1); //or we can write  num = (num*(A-i+1))/i; instead of 2 lines
         num /= i;
         res.push_back(num);
     }

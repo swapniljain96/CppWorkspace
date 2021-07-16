@@ -42,20 +42,21 @@ vector<int> Solution::subUnsort(vector<int> &a)
 
 // Method 2: We can use the property that in sorted array, element at index i is smallest from index i to n-1.
 // TC=O(n) SC=O(1)
-vector<int> Solution::subUnsort(vector<int> &A)
+vector<int> Solution::subUnsort(vector<int> &a)
 {
-    int n = A.size(), l = n, r = 0, mx = INT_MIN, mn = INT_MAX;
+    int n = a.size();
+    int l = n, r = 0, mn = INT_MAX, mx = INT_MIN;
     for (int i = 0; i < n; i++)
     {
-        if (A[i] < mx)
+        if (a[i] < mx)
             r = i;
-        mx = max(A[i], mx);
+        mx = max(mx, a[i]);
     }
     for (int i = n - 1; i >= 0; i--)
     {
-        if (A[i] > mn)
+        if (a[i] > mn)
             l = i;
-        mn = min(mn, A[i]);
+        mn = min(mn, a[i]);
     }
     if (l == n)
         return {-1};
