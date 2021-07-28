@@ -13,8 +13,11 @@ Constraints:
 1 <= nums.length <= 1000
 0 <= nums[i] <= 1000 */
 
-// Algo: Valid Triangle Condition: " A + B > C "
-// for this we first sort the array and apply 2 pointers technique for our A and B
+// Valid Triangle Condition: " A + B > C "
+// for this we first sort the array and apply 2 pointers technique for each i using l and r where l always start from 0 and
+// r always start from i-1;
+// eg. A = [1, 1, 1, 2, 2]
+//          l        r  i
 
 class Solution
 {

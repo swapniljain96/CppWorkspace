@@ -1,0 +1,2 @@
+#1. Number of contiguous subarray in a window of i and j(where i is start and j is end) is equal to = j-i+1;
+
