@@ -30,6 +30,7 @@ Constraints:
 1 <= N <= 103
 1 <= k <= N */
 
+// Method 1:
 class Solution
 {
 public:
@@ -61,5 +62,31 @@ public:
         end->next = head;
 
         return newStart;
+    }
+};
+
+// Method 2:
+
+class Solution
+{
+public:
+    //Function to rotate a linked list.
+    Node *rotate(Node *head, int k)
+    {
+        Node *rotate = head;
+        Node *end = head;
+        while (end->next)
+        {
+            end = end->next;
+        }
+        k--;
+        while (k--)
+        {
+            rotate = rotate->next;
+        }
+        end->next = head;
+        head = rotate->next;
+        rotate->next = NULL;
+        return head;
     }
 };

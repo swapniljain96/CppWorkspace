@@ -33,7 +33,7 @@ Expected Auxiliary Space: O(1).
 Constraints:
 1 <= L <= 106
 1 <= N <= 106 */
-
+// Method 1: Using Counting the nodes
 int getNthFromLast(Node *head, int n)
 {
     int cnt = 0;
@@ -53,4 +53,40 @@ int getNthFromLast(Node *head, int n)
     }
 
     return fin->data;
+}
+
+// Method 1: Using 2 pointers
+int getNthFromLast(Node *head, int n)
+{
+    Node *main = head, *ref = head;
+    int cnt = 0;
+    //case 1:if n is more then length
+    if (head)
+    {
+        while (cnt < n)
+        {
+            if (!ref)
+                return -1;
+            ref = ref->next;
+            cnt++;
+        }
+    }
+
+    //case 2:if n is equal to length
+    if (ref == NULL)
+    {
+        head = head->next;
+        if (head)
+            return main->data;
+    }
+    //case 3:if n is less then length
+    else
+    {
+        while (ref)
+        {
+            main = main->next;
+            ref = ref->next;
+        }
+    }
+    return main->data;
 }

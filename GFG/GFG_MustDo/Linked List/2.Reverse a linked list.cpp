@@ -23,6 +23,7 @@ Expected Auxiliary Space: O(1).
 Constraints:
 1 <= N <= 104 */
 
+// Method 1: Iterative
 class Solution
 {
 public:
@@ -40,5 +41,23 @@ public:
         }
 
         return prev;
+    }
+};
+
+// Method 2: Recursive
+
+class Solution
+{
+public:
+    //Function to reverse a linked list.
+    struct Node *reverseList(struct Node *head)
+    {
+        if (!head->next)
+            return head;
+
+        Node *revNode = reverseList(head->next);
+        head->next->next = head;
+        head->next = NULL;
+        return revNode;
     }
 };

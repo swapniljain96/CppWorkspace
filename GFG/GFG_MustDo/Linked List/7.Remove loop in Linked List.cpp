@@ -40,7 +40,7 @@ Expected auxiliary space : O(1)
 
 Constraints:
 1 ≤ N ≤ 104 */
-
+// Method 1: Floyd Cycle Algo
 class Solution
 {
 public:
@@ -66,6 +66,31 @@ public:
                     f = f->next;
                 }
                 f->next = NULL;
+            }
+        }
+    }
+};
+
+// Method 2: using hash map
+class Solution
+{
+public:
+    void removeLoop(Node *head)
+    {
+        unordered_map<Node *, int> m;
+        Node *last = NULL;
+        while (head)
+        {
+            if (m.find(head) == m.end())
+            {
+                m[head]++;
+                last = head;
+                head = head->next;
+            }
+            else
+            {
+                last->next = NULL;
+                break;
             }
         }
     }

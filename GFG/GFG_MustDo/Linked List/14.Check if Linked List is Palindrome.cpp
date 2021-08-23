@@ -27,6 +27,10 @@ Expected Auxialliary Space Usage: O(1)  (ie, you should not use the recursive s
 Constraints:
 1 <= N <= 105 */
 
+// Steps: 1.find the middle node of the linked list according to even and odd.
+//        2.Reverse the LL after the middle node.
+//        3.Compare start node of LL to the start of reverse LL.
+
 class Solution
 {
 public:
