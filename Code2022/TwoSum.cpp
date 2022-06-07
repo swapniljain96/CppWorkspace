@@ -18,7 +18,6 @@ Example 3:
 
 Input: nums = [3,3], target = 6
 Output: [0,1]
- 
 
 Constraints:
 
@@ -27,22 +26,28 @@ Constraints:
 -109 <= target <= 109
 Only one valid answer exists. */
 
-//Method 1
+// Method 1
 
-class Solution {
+class Solution
+{
 public:
-    vector<int> twoSum(vector<int>& a, int target) {
-    map<int,int> m;
+  vector<int> twoSum(vector<int> &a, int target)
+  {
+    map<int, int> m;
     vector<int> v;
-    for(int i=0;i<a.size();i++)
-    { m[a[i]]=i; }
-    for(int i=0;i<a.size();i++)
-     { if(m.find(target-a[i])!=m.end() and i!=m[target-a[i]])
-       { v.push_back(i);
-         v.push_back(m[target-a[i]]);
-         break;
-        }
-     }  
-    return v;
+    for (int i = 0; i < a.size(); i++)
+    {
+      m[a[i]] = i;
     }
+    for (int i = 0; i < a.size(); i++)
+    {
+      if (m.find(target - a[i]) != m.end() and i != m[target - a[i]])
+      {
+        v.push_back(i);
+        v.push_back(m[target - a[i]]);
+        break;
+      }
+    }
+    return v;
+  }
 };
